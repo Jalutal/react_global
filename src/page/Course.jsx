@@ -21,6 +21,9 @@ function Course() {
         <>
         <Header />
         <p>Voici un test de page.</p>
+        <p className="pCourse">Comme toute page web il est possible de la modifier via css.</p>
+        <p>On peut mettre aussi des images. Bref, c'est une page web.</p>
+        <img src="https://faq.o2switch.fr/_media/tuto-rapide/o2switch-deployer-react.js.png" alt="logo react" />
         </>
     )
 }

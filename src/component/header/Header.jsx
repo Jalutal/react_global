@@ -17,7 +17,7 @@ function Header() {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/course2">Cours 2</Link>
+                    <Link to="/course2">Cours 2 - Tableau</Link>
                 </li>
             </ul>
         </nav>
