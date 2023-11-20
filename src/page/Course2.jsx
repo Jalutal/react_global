@@ -74,7 +74,7 @@ function Course2() {
 
     return (
         <>
-        <Header />
+        <Header pageTitle="Cours sur les tableaux avec des pokemons" isUserAuthenticated={true} />
         <h1>Ici nous allons nous pencher sur les tableaux.</h1>
         <p>Dans le function Course 2 j'ai repris le tableau de données des Pokémons (nommé pokemons).</p>
         <p>Ce tableau contient les noms, types, images des pokémons mais également une id et une équipe (ou non).</p>
@@ -105,8 +105,11 @@ function Course2() {
         </ol>
         <p>On va donc écrire au dessus du return dans la fonction la variable de stockage puis on map dans le corps du texte.</p>
         <p>Le résultat est le suivant :</p>
-        {pokemonIsInTeam.map((pokemon) =>
+        {pokemonIsInTeam.map((pokemon) => 
+        <> 
         <p>{pokemon.name}</p>
+        <p>{pokemon.types}</p>
+        </>
         )}
         <p>Nous voyons que la liste est plus courte car seuls les pokémons en team on été sélectionnés.</p>
         </>

@@ -7,20 +7,29 @@ La balise Link doit s'écrire Link et non link (idem sur l'import)
 */
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ pageTitle, isUserAuthenticated }) {
 
     return (
         <header>
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/course2">Cours 2 - Tableau</Link>
-                </li>
-            </ul>
-        </nav>
+            <p>{pageTitle}</p>
+            <nav>
+        <ul>
+          <li>
+            <Link to="/">{pageTitle === "HomePage" ? <strong>Home</strong> : <p>Home</p>}</Link>
+          </li>
+          <li>
+            <Link to="/course2">
+              {pageTitle === "Page de liste de produits" ? <strong>Cours 2 - Les tableaux</strong> : <p>Cours 2</p>}
+            </Link>
+          </li>
+          <li>
+            <Link to="/course3">
+              {pageTitle === "Page en rapport avec les props" ? <strong>Cours 3 - Les props</strong> : <p>Cours 3</p>}
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {isUserAuthenticated ? <p>Bonjour</p> : <p>Connectez-vous </p>}
         </header>
     )
 }

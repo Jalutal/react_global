@@ -19,7 +19,7 @@ function Course() {
     console.log(`Voici un test de page.`)
     return (
         <>
-        <Header />
+        <Header pageTitle="Home de l'apprentissage. Je cherche toujours un meilleur je de mots." isUserAuthenticated={false} />
         <p>Voici un test de page.</p>
         <p className="pCourse">Comme toute page web il est possible de la modifier via css.</p>
         <p>On peut mettre aussi des images. Bref, c'est une page web.</p>
